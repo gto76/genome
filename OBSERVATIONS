@@ -1,0 +1,38 @@
+genome1 skorpijon
+genome2 stonoga
+genome3,4 clovek
+genome5 kobilca
+
+----
+AA in TT najveckrat, CG povsod najmanjkrat
+----
+CAGA pri cloveku med prvimi, pri ostalih dveh med zadnjimi
+
+GAGA visoka pri skorpijonu nizka pri stonogi srednja pri cloveku
+AGAG samo človek in škorpijon, kobilica samo 1
+
+ACTA visoka samo pri stonogi
+ATAT (CTAT) druga pri stonogi in skorpijonu, prva pri kobilci, pri cloveku nizje (verjetno nasploh TAT/ATA)
+CACA skorpijon samo ena drugi velik
+Zadnjih par od stonoge kobilica nima
+CTGT človek, malo škorpijon, drugi ne
+TCTG samo prvi del od človeka
+CAGC enako
+TCTC človek in škorpijon
+CTGT človek oba, malo škorpijon
+CAGA človek oba, malo kobilca
+CACA človek in stonoga, malo kobilica nič škorpijon
+TCAG človek veliko oba, ostali srednje
+CTCA človek oba enako dosti, stonoga srednje
+CGAT uglavnem skorpijon
+
+GACG vsi zelo malo
+
+ATCA stonoga in kobilica veliko
+ACAT kobilica, malo človek
+CTAT žuželke
+----
+Štiri različni:
+AGCT pri vseh žuž največkrat
+----
+TAATAA žuželke
