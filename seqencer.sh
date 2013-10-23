@@ -17,10 +17,11 @@ for f in tmp/*; do
 	echo "$delta"
 	out=""
 	for ((i=1; i<=$delta; i++)); do
-		out="$out\n\t\t"
+		out="$out       \t\n"
 	done
 	echo "$out"
 	echo -e "$out" >> "$f"
 done
 
-paste $(column -t $(for ((i=1; i<=$N; i++)); do echo ./tmp/tmp"$i"; done))
+
+paste `for ((i=1; i<=$N; i++)); do echo ./tmp/tmp"$i"; done`
