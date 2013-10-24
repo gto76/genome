@@ -1,10 +1,21 @@
 genome1 skorpijon
-genome2 stonoga
-genome3,4 clovek
-genome5 kobilca
-
+genome2 stonoga (kačica)
+genome3 clovek
+genome4 kobilca
+genome5 ligenj
+genome6 stonoga (striga)
+genome7 žaba
+----
+primerjava treh zapordnih: pri pikih vedno isti vrstni red: kobilca, stonoga, skorpijon
+tudi pri stirih kobilca najbolj spicasta
+----
+TA pri velikem cloveku najmanj pri zuzelkah najvec
 ----
 AA in TT najveckrat, CG povsod najmanjkrat
+----
+!!!GT Vsim med 188 in 222, razen ŠKORPIJON: 448!!!!!
+---
+CCC samo stonoga veliko
 ----
 CAGA pri cloveku med prvimi, pri ostalih dveh med zadnjimi
 
