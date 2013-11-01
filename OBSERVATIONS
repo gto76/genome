@@ -27,6 +27,17 @@ CCC samo stonoga veliko
 ---
 primerjava treh zapordnih: pri pikih vedno isti vrstni red: kobilca, stonoga, skorpijon
 tudi pri stirih kobilca najbolj spicasta
+---
+GGT - skupaj (ligenj preskoči k vretenčarjem)
+GTA - vsi dost skupej
+TAG - narazen, brez logike
+CAT - skupi, brez logike
+CCC - narazen, kacica se pridruzi vretencarjem
+---
+Pri ribi, zvezdi, žabi in človeku graf narašča linearno (najbolj žaba)
+Pri Lignju, Stonogi, kobilci pa eksponentno
+Kacica je nekje vmes
+Pri človeškem genu pa čist zares linearno!
 ###########
 STERKE:
 CAGA pri cloveku med prvimi, pri ostalih dveh med zadnjimi
