@@ -1,4 +1,4 @@
-N=8
+N=11
 rm tmp/*
 
 #run the query over n files

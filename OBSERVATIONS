@@ -5,6 +5,17 @@ genome4 kobilca
 genome5 ligenj
 genome6 stonoga (striga)
 genome7 žaba
+genome8 random človeški geni
+genome9 riba
+genome10 meduza
+genome11 morska zvezda
+----
+set style data linespoints; plot 'tmp1' title "Skorpijon", 'tmp2' title "Kacica", 'tmp3' title "Clovek", 'tmp4' title "Kobilica", 'tmp5' title "Ligenj", 'tmp6' title "Stonoga", 'tmp7' title "Zaba", 'tmp9' title "Riba", 'tmp10' title "Meduza", 'tmp11' title "Morska Zvezda"
+----
+----
+Pet zaporednih največkrat ima škorpion TTTTT, drugi bolj malokrat
+ligenj, kobilica, stonoga, skorpijon imajo največ ta pogostih 5-vzorcev
+Šele pri 24-tem najpogostejšem vzorcu se pokaze bit ki ni A ali T
 ----
 primerjava treh zapordnih: pri pikih vedno isti vrstni red: kobilca, stonoga, skorpijon
 tudi pri stirih kobilca najbolj spicasta
