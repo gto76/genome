@@ -1,5 +1,9 @@
+resolution=`xrandr | grep '*' | grep -o '[0-9]*x[0-9]*' | tr x ,`
+
 echo $(
+	echo -n "set terminal wxt size $resolution; " #1280,800; "
 	echo -n "set style data linespoints; "
+	echo -n "set xtics rotate by -90; "
 	echo -n "set xtics("
 	echo -n $(
 		i=0
@@ -10,5 +14,7 @@ echo $(
 		done
 	) | head -c-1
 	echo -n "); " 
-	echo "plot 'tmp/tmp1' title \"Skorpijon\", 'tmp/tmp2' title \"Kacica\", 'tmp/tmp3' title \"Clovek\", 'tmp/tmp4' title \"Kobilica\", 'tmp/tmp5' title \"Ligenj\", 'tmp/tmp6' title \"Stonoga\", 'tmp/tmp7' title \"Zaba\", 'tmp/tmp9' title \"Riba\", 'tmp/tmp10' title \"Meduza\", 'tmp/tmp11' title \"Morska Zvezda\""
-) | gnuplot -p -
+	echo -n "plot 'tmp/tmp1' title \"Skorpijon\", 'tmp/tmp2' title \"Kacica\", 'tmp/tmp3' title \"Clovek\", 'tmp/tmp4' title \"Kobilica\", 'tmp/tmp5' title \"Ligenj\", 'tmp/tmp6' title \"Stonoga\", 'tmp/tmp7' title \"Zaba\", 'tmp/tmp9' title \"Riba\", 'tmp/tmp10' title \"Meduza\", 'tmp/tmp11' title \"Morska Zvezda\"; "
+	echo "replot"
+) | gnuplot -p
+
