@@ -44,6 +44,10 @@ Pri ribi, zvezdi, žabi in človeku graf narašča linearno (najbolj žaba)
 Pri Lignju, Stonogi, kobilci pa eksponentno
 Kacica je nekje vmes
 Pri človeškem genu pa čist zares linearno!
+===========
+Nov Alg:
+GCC - ekstremno narazen
+CAA - dost skupi
 ###########
 STERKE:
 CAGA pri cloveku med prvimi, pri ostalih dveh med zadnjimi
@@ -83,3 +87,10 @@ ligenj, kobilica, stonoga, skorpijon imajo največ ta pogostih 5-vzorcev
 ###########
 SESTKE:
 TAATAA žuželke
+========
+Nov alg:
+ATAGCG - samo kacica
+CCGTCG, CGGCAC - žaba
+CGGGGC - žaba
+CTCACG - morska zvezda
+TTTTTT - riba edina brez
