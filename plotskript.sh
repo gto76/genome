@@ -1,4 +1,5 @@
-#USAGE: ./plotscript.sh "1 2 3"
+# Plots tmp[number] data from tmp folder. Looks for animal names in tmp/names.
+#USAGE: ./plotscript.sh "1 2 3" -> plots tmp1, tmp2 and tmp3
 
 resolution=`xrandr | grep '*' | grep -o '[0-9]*x[0-9]*' | tr x ,`
 

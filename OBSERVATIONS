@@ -14,6 +14,8 @@ set style data linespoints; plot 'tmp1' title "Skorpijon", 'tmp2' title "Kacica"
 ----
 ###########
 ###########
+44K tmptmp2 seqencer6
+###########
 POSAMEZNI GITI:
 Riba, zvezda, žaba skoraj enaka števila
 Ostali razkropljeni, razen pri G-ju
