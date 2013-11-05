@@ -17,8 +17,7 @@ if [ ! -d "$3"/names/ ]; then
 	mkdir "$3"/names/
 fi
 
-
-n=`echo "$1" | wc -w`
+n=`ls -l $1 | wc -l`
 i=0
 for fName in $1; do
 	#remove path from fName
