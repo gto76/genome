@@ -12,13 +12,6 @@ int main(int argc, char *argv[])
     unsigned int len;
     read = getline(&buffer, &len, stdin);
 
-  	/*
-    if (-1 != read)
-    	puts(buffer);
-    else
-    	printf("No line read...\n");
-    printf("Size read: %d\n Len: %d\n Argument: %s\n", read, len, argv[1]);
-    */
  	int i;
 	for (i=0; i < read-kombLen; i++) {
 		printf("%.*s\n", kombLen, buffer + i);
