@@ -9,7 +9,7 @@ done
 
 allCombos=`cat ./tmp/tmptmp* | sort | uniq`
 
-#tle bi blo treba vsaki kombinaciji še odštet 1
+# here 1 should be deduced from every combination
 for ((i=1; i<=$N; i++)); do
 	echo "$allCombos" | cat ./tmp/tmptmp"$i" - | sort | uniq -c | grep [ACGT]  > ./tmp/tmp"$i"
 done

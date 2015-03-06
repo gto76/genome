@@ -3,188 +3,107 @@ genome
 
 Bash scripts for basic DNA analysis.
 
-counter.sh:
-Returns number of 
+### counter.sh
+Counts the number of same bit occurances in a row for every bit (ACGT).
 
-# Koliko ponovitev enakih bitov imamo
+### drawPlotGbkNoLegend.sh
+Plots tmp[number] data from tmp folder. Looks for animal names in tmp/names.
+USAGE: ./plotscript.sh "filenames" -> plots tmp1, tmp2 and tmp3
+WARNING: Always use double quotes around filenames, even if you use regex
 
-drawPlotGbkNoLegend.sh:
-# Plots tmp[number] data from tmp folder. Looks for animal names in tmp/names.
-#USAGE: ./plotscript.sh "filenames" -> plots tmp1, tmp2 and tmp3
-# WARNING: Always use double quotes around filenames, even if you use regex
-	echo -n "set key off; " # NEW
-		echo -n "'$fileName', " # NEW
+### drawPlotGbk.sh
+Plots tmp[number] data from tmp folder. Looks for animal names in tmp/names.
+USAGE: ./plotscript.sh "filenames" -> plots tmp1, tmp2 and tmp3
 
-drawPlotGbk.sh:
-# Plots tmp[number] data from tmp folder. Looks for animal names in tmp/names.
-#USAGE: ./plotscript.sh "filenames" -> plots tmp1, tmp2 and tmp3
-		first=`echo $1 | grep -o "^[^ ]*"` #NEW
-		ime=`cat ./tmp/names | grep "^$fileName" | sed 's/^[^ ]* \(.*\)$/\1/'` #NEW
-		echo -n "'tmp/tmp$fileName' title \"$ime\", " #NEW
+### drawPlot.sh
+Plots tmp[number] data from tmp folder. Looks for animal names in tmp/names.
+USAGE: ./plotscript.sh "1 2 3" -> plots tmp1, tmp2 and tmp3
 
-drawPlot.sh:
-# Plots tmp[number] data from tmp folder. Looks for animal names in tmp/names.
-#USAGE: ./plotscript.sh "1 2 3" -> plots tmp1, tmp2 and tmp3
+### getAllCombos.sh
+Outputs all combinations of adjecent characters of length $1
+Reads from standard input
 
-genomes:
+### getAllNames.sh
+Prints all the species names from the gbk files in passed directory.
 
-getAllCombos:
-Binary file getAllCombos matches
+### getNameFromGbk.sh:
+Prints species name from the gbk file. Gbk file needs to be piped in.
 
-getAllCombos.c:
-#include <stdio.h>
-#include <stdlib.h>
+### getGenFromGbk.sh
+Prints only the gene sequence from the gbk file. File needs to be piped in.
 
-getAllCombos.sh:
-#bin/sh
-# Outputs all combinations of adjecent characters of length $1
-# Reads from standard input
+### seq1.sh
+deprecated
+All combinations of four bits
 
-getAllNames.sh:
+### seq2.sh
+deprecated
+Four different bits
 
-getGenFromGbk.sh:
+### seq3.sh
+deprecated
+Four bits without a repetition
 
-getNameFromGbk.sh:
+### seqencer1.sh
+deprecated
 
-makefile:
+### seqencer2.sh
+deprecated
 
-OBSERVATIONS:
-###########
-###########
-###########
-###########
-###########
-###########
-###########
+### seqencer3.sh
+deprecated
 
-README.md:
-#	Način da prideš do pipe in
-#   input=`cat`
-#	echo "$input" | less
-# Koliko ponovitev enakih bitov imamo
-# Število bitov
-#sum=$(cat "$1" | grep [^TG][^TG][^TG] -Eo | sort | uniq -c | tr -d "A-Z " | awk '{ sum += $1 } END { print sum }')
-#echo "$sum"
-# Plots tmp[number] data from tmp folder. Looks for animal names in tmp/names.
-#USAGE: ./plotscript.sh "filenames" -> plots tmp1, tmp2 and tmp3
-# WARNING: Always use double quotes around filenames, even if you use regex
-	echo -n "set key off; " # NEW
-		echo -n "'$fileName', " # NEW
-# Plots tmp[number] data from tmp folder. Looks for animal names in tmp/names.
-#USAGE: ./plotscript.sh "filenames" -> plots tmp1, tmp2 and tmp3
-		first=`echo $1 | grep -o "^[^ ]*"` #NEW
-		ime=`cat ./tmp/names | grep "^$fileName" | sed 's/^[^ ]* \(.*\)$/\1/'` #NEW
-		echo -n "'tmp/tmp$fileName' title \"$ime\", " #NEW
-# Plots tmp[number] data from tmp folder. Looks for animal names in tmp/names.
-#USAGE: ./plotscript.sh "1 2 3" -> plots tmp1, tmp2 and tmp3
-#include <stdio.h>
-#include <stdlib.h>
-#bin/sh
-# Outputs all combinations of adjecent characters of length $1
-# Reads from standard input
-###########
-###########
-###########
-###########
-###########
-###########
-###########
+### seqencer4.sh
+deprecated
 
-seq1.sh:
-#Vse kombinacije stirih znakov
+### seqencer5.sh
+USAGE: ./sequencer5.sh "1 2 3"
 
-seq2.sh:
-#Stirje razlicni znaki
+### seqencer6.sh
+USAGE: ./sequencer5.sh "1 2 3" <no of chars in combinations> <optional sed query>
+Run the query on files, numbered in first argument.
+If combination doesn't exist, mark it 0.
+Order by global frequency of combination.
 
-seq3.sh:
-#stirje znaki brez ponovitve
+### seqencerGbk2P1.sh
+USAGE: ./<script name>.sh "filenames" <no of chars in combinations> <results folder>
+WARNING: Always use double quotes around filenames, so they get
+treated as single argument.
+Only performs first part of operation and saves intermediate results
+in ./comb<number of chars in comb> subfolder.
+Run the query on files, numbered in first argument.
+If combination doesn't exist, mark it 0.
+Create dirs if they don't exist
+	remove path from fName
+	progress bar
+ Remove duplicates from names file
 
-seqencer1.sh:
-#run the query over n files
-#print all results side by side
+### seqencerGbk2P2.sh
+USAGE: ./<scriptname>.sh "filenames" <>
+./sequencerGbk.sh "filenames" <no of chars in combinations> <optional sed query>
+run the query on files, numbered in first argument
+if combination doesn't exist, mark it 0
+order by global frequency of combination
+grepamo fajl z vsemi kombinacijami	po vrsti
+če slučajno ne obstaja damo v fajl: 0 <kombinacija>
+	progress bar
+print all results side by side
 
-seqencer2.sh:
-#run the query over n files
-#print all results side by side
+### seqencerGbk2.sh
+USAGE: ./sequencerGbk.sh "filenames" <no of chars in combinations> <optional sed query>
+run the query on files, numbered in first argument
+if combination doesn't exist, mark it 0
+order by global frequency of combination
+	progress bar
 
-seqencer3.sh:
-#run the query over n files
-#if combination doesent exist, mark it 0
-#tle bi blo treba vsaki kombinaciji še odštet 1
-#./trimResults.sh
-#print all results side by side
+### seqencerGbk.sh
+USAGE: ./sequencerGbk.sh "filenames" <no of chars in combinations> <optional sed query>
+run the query on files, numbered in first argument
+if combination doesn't exist, mark it 0
+order by global frequency of combination
+tle bi blo treba vsaki kombinaciji še odštet 1
+print all results side by side
 
-seqencer4.sh:
-#run the query over n files
-#if combination doesnt exist, mark it 0
-#order by global frequency of combination
-#tle bi blo treba vsaki kombinaciji še odštet 1
-#print all results side by side
+### trimResults.sh
+make results the same length
 
-seqencer5.sh:
-#USAGE: ./sequencer5.sh "1 2 3"
-#run the query on files, numbered in first argument
-#if combination doesn't exist, mark it 0
-#order by global frequency of combination
-#tle bi blo treba vsaki kombinaciji še odštet 1
-#print all results side by side
-
-seqencer6.sh:
-#USAGE: ./sequencer5.sh "1 2 3" <no of chars in combinations> <optional sed query>
-#run the query on files, numbered in first argument
-#if combination doesn't exist, mark it 0
-#order by global frequency of combination
-#tle bi blo treba vsaki kombinaciji še odštet 1
-#print all results side by side
-
-seqencerGbk2P1.sh:
-# USAGE: ./<script name>.sh "filenames" <no of chars in combinations> <results folder>
-# WARNING: Always use double quotes around filenames, so they get
-# treated as single argument.
-# Only performs first part of operation an saves intermediate results
-# in ./comb<number of chars in comb> subfolder.
-# Run the query on files, numbered in first argument.
-# If combination doesn't exist, mark it 0.
-# Create dirs if they don't exist
-	#remove path from fName
-	#progress bar
-# Remove duplicates from names file
-
-seqencerGbk2P2.sh:
-# USAGE: ./<scriptname>.sh "filenames" <>
-# ./sequencerGbk.sh "filenames" <no of chars in combinations> <optional sed query>
-# run the query on files, numbered in first argument
-# if combination doesn't exist, mark it 0
-# order by global frequency of combination
-#grepamo fajl z vsemi kombinacijami	po vrsti
-#če slučajno ne obstaja damo v fajl: 0 <kombinacija>
-	#progress bar
-#print all results side by side
-
-seqencerGbk2.sh:
-#USAGE: ./sequencerGbk.sh "filenames" <no of chars in combinations> <optional sed query>
-#run the query on files, numbered in first argument
-#if combination doesn't exist, mark it 0
-#order by global frequency of combination
-	#progress bar
-########
-#TODO
-#tle bi blo treba vsaki kombinaciji še odštet 1
-#print all results side by side
-
-seqencerGbk.sh:
-#USAGE: ./sequencerGbk.sh "filenames" <no of chars in combinations> <optional sed query>
-#run the query on files, numbered in first argument
-#if combination doesn't exist, mark it 0
-#order by global frequency of combination
-#tle bi blo treba vsaki kombinaciji še odštet 1
-#print all results side by side
-
-test:
-
-tmp:
-
-trimResults.sh:
-#make results the same length
-
-weka:

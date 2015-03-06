@@ -1,3 +1,5 @@
+# Prints species name from the gbk file. Gbk file needs to be piped in.
+
 input=`cat`
 
 name=`echo "$input" | grep SOURCE -A1 | tr "\n" "  " | sed 's/.*(\(.*\)).*/\1\n/' | sed 's/\( \)\1*/\1/g'`
