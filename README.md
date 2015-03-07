@@ -1,10 +1,10 @@
-genome
+Genome
 ======
 
-Bash scripts for basic DNA analysis.
+Bash scripts for basic DNA analysis. In genomes directory there are few samples of mitochondrial DNA records without any metadata. Most scripts will accept data in [gbk](http://www.nmpdr.org/FIG/wiki/view.cgi/FIG/GBK) format. Weka directory contains scripts that can come handy when classifying or clustering the data with Weka library (Java machine learning lib).
 
 ### counter.sh
-Counts the number of same bit occurances in a row for every bit (ACGT).
+Counts the number of same bit occurrences in a row for every bit (ACGT).
 
 ### drawPlotGbkNoLegend.sh
 Plots tmp[number] data from tmp folder. Looks for animal names in tmp/names.
@@ -60,17 +60,17 @@ deprecated
 USAGE: ./sequencer5.sh "1 2 3"
 
 ### seqencer6.sh
-USAGE: ./sequencer5.sh "1 2 3" <no of chars in combinations> <optional sed query>
+USAGE: ./sequencer5.sh "1 2 3" <no-of-chars-in-combinations> <optional-sed-query>
 Run the query on files, numbered in first argument.
 If combination doesn't exist, mark it 0.
 Order by global frequency of combination.
 
 ### seqencerGbk2P1.sh
-USAGE: ./<script name>.sh "filenames" <no of chars in combinations> <results folder>
+USAGE: ./<script-name>.sh "filenames" <no-of-chars-in-combinations> <results-folder>
 WARNING: Always use double quotes around filenames, so they get
 treated as single argument.
 Only performs first part of operation and saves intermediate results
-in ./comb<number of chars in comb> subfolder.
+in ./comb<number-of-chars-in-comb> subfolder.
 Run the query on files, numbered in first argument.
 If combination doesn't exist, mark it 0.
 Create dirs if they don't exist
@@ -80,28 +80,25 @@ Create dirs if they don't exist
 
 ### seqencerGbk2P2.sh
 USAGE: ./<scriptname>.sh "filenames" <>
-./sequencerGbk.sh "filenames" <no of chars in combinations> <optional sed query>
+./sequencerGbk.sh "filenames" <no-of-chars-in-combinations> <optional-sed-query>
 run the query on files, numbered in first argument
 if combination doesn't exist, mark it 0
 order by global frequency of combination
-grepamo fajl z vsemi kombinacijami	po vrsti
-če slučajno ne obstaja damo v fajl: 0 <kombinacija>
 	progress bar
 print all results side by side
 
 ### seqencerGbk2.sh
-USAGE: ./sequencerGbk.sh "filenames" <no of chars in combinations> <optional sed query>
+USAGE: ./sequencerGbk.sh "filenames" <no-of-chars-in-combinations> <optional-sed-query>
 run the query on files, numbered in first argument
 if combination doesn't exist, mark it 0
 order by global frequency of combination
 	progress bar
 
 ### seqencerGbk.sh
-USAGE: ./sequencerGbk.sh "filenames" <no of chars in combinations> <optional sed query>
+USAGE: ./sequencerGbk.sh "filenames" <no-of-chars-in-combinations> <optional-sed-query>
 run the query on files, numbered in first argument
 if combination doesn't exist, mark it 0
 order by global frequency of combination
-tle bi blo treba vsaki kombinaciji še odštet 1
 print all results side by side
 
 ### trimResults.sh
