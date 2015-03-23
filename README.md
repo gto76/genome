@@ -26,7 +26,7 @@ Reads from standard input
 ### getAllNames.sh
 Prints all the species names from the gbk files in passed directory.
 
-### getNameFromGbk.sh:
+### getNameFromGbk.sh
 Prints species name from the gbk file. Gbk file needs to be piped in.
 
 ### getGenFromGbk.sh
