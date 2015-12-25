@@ -3,11 +3,15 @@ Genome
 
 #### DNA analysis in Bash
 
+Bash scripts for basic DNA analysis. In 'genomes' directory there are few samples of mitochondrial DNA records without any metadata. Most scripts will accept data in [gbk](http://www.nmpdr.org/FIG/wiki/view.cgi/FIG/GBK) format. 'Weka' directory contains scripts that can come handy when classifying or clustering the data with Weka library (Java machine learning lib).
+
 ![screenshot](doc/screenshot.jpg)
 
-(Picture represents a cluster of species based on a mitochondrial dna.)
+On picture is a cluster of species based on a mitochondrial dna.
 
-Bash scripts for basic DNA analysis. In 'genomes' directory there are few samples of mitochondrial DNA records without any metadata. Most scripts will accept data in [gbk](http://www.nmpdr.org/FIG/wiki/view.cgi/FIG/GBK) format. 'Weka' directory contains scripts that can come handy when classifying or clustering the data with Weka library (Java machine learning lib).
+
+List Of Scripts
+---------------
 
 ### counter.sh
 Counts the number of same bit occurrences in a row for every bit (ACGT).
